@@ -1,17 +1,21 @@
 import Login from "./components/AuthCredentials/Login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sample from "./components/AuthCredentials/Sample.jsx";
+import {  Routes, Route } from "react-router";
+import Register from "./components/AuthCredentials/Register.jsx";
+import Dashboard from "./components/User/Dashboard.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
+import MyProfile from "./components/User/MyProfile.jsx";
 
 function App() {
 
   return (
       <div>
-          <BrowserRouter>
               <Routes>
                   <Route index="true" element={<Login />} />
-                  <Route index="/sample" element={<Sample />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/profile" element={<MyProfile />} />
               </Routes>
-          </BrowserRouter>
       </div>
   )
 }
